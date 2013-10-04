@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="author" content="Kyler Schroeder" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>qrHuntr</title>
+
+		<!-- Viewport options -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320" />
+        
+        <!-- Smooth fonts in IE Mobile -->
+		<meta http-equiv="cleartype" content="on">
+        
+        <!-- Stylesheets -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/jquery.mobile-1.3.2.min.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery.mobile.structure-1.3.2.min.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery.mobile.theme-1.3.2.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+
+	<body><!-- Starting content section of code -->
+
+		<section data-role="page" id="home">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Home</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <a href="#err">
+                            <h3>Accelerometer</h3>
+                            <p>Going to have accelerometer functionality to assist with compass and geolocation.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#flick">
+                            <h3>Camera</h3>
+                            <p>Going to integrate the camera with a QR Reader.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#err">
+                            <h3>Capture</h3>
+                            <p>Going to allow players to also capture pictures from the app during their hunt.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#compass">
+                            <h3>Compass</h3>
+                            <p>Players may or may not need a compass during their hunt, if they do...here it is!</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#geo">
+                            <h3>Geolocation</h3>
+                            <p>Players will be able to use geolocation to figure out and mark places on a map.</p>
+                        </a>
+                    </li>
+                </ul>
+			</section>
+
+			<section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+			<section data-role="content">
+					<ul data-role="listview" data-inset="true">
+						<li>
+							<a href="#instagram">
+								<h3>Hipstergram</h3>
+								<p>Players will be able to view photos posted by other players using an event hashtag.</p>
+							</a>
+						</li>
+						<li>
+							<a href="#qr">
+								<h3>QR Reader</h3>
+								<p>A QR Reader will be used to scan QR Codes set up at different places in the hunt.</p>
+							</a>
+						</li>
+					</ul>
+			</section>
+
+			<section data-role="content">
+					<ul data-role="listview" data-inset="true">
+						<li>
+							<a href="#disc1">
+								<h3>Week 1 Discussion</h3>
+      						</a>
+						</li>
+						<li>
+							<a href="#disc2">
+								<h3>Week 2 Discussion</h3>
+                            </a>
+						</li>
+                        <li>
+							<a href="#disc3">
+								<h3>Week 3 Discussion</h3>
+							</a>
+						</li>
+					</ul>
+			</section>
+            
+		</section>
+        
+        <section data-role="page" id="err" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Error 37 - This page will not exist.</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+            	Nothing to see here folks.
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <section data-role="page" id="flick" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Flick</h2>
+				</header>
+			</section>
+
+			<section data-role="content" data-theme="c" data-add-back-btn="true">
+            	Cop a flick.
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check" class="ui-btn-active ui-state-persist">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <section data-role="page" id="compass" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Compass</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+            	Where are you going?
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid" class="ui-btn-active ui-state-persist">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <section data-role="page" id="geo" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Geolocation</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+            	Where are you?
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <section data-role="page" id="instagram" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Instagram</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+            	Hit it up!
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <section data-role="page" id="qr" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">QR</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+            	Mark it down!
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check" class="ui-btn-active ui-state-persist">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <section data-role="page" id="disc1" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Week 1 Discussion</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+            	Get it done.
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <section data-role="page" id="disc2" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Week 2 Discussion</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+            	Get it done.
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <section data-role="page" id="disc3" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Week 3 Discussion</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+            	Get it done.
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+        <!-- JavaScript Links -->
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.min.js"></script>
+        <!--<script src="js/jquery-1.10.2.min.map"></script>-->
+        <script src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script src="js/main.js"></script>
+	</body>
+</html>

@@ -30,4 +30,7 @@
     <preference name="android-installLocation" value="auto" />
     <access origin="http://*.google.com" />
     <access origin="*" />
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+    </feature>
 </widget>

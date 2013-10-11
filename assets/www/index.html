@@ -27,6 +27,7 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
 	</head>
 
 	<body><!-- Starting content section of code -->
@@ -204,7 +205,9 @@
 			</section>
 
 			<section data-role="content">
-            	Where are you?
+                    <article>
+                    	
+                    </article>
             </section>
             
             <section data-role="footer" data-position="fixed" data-id="footNav">
@@ -228,20 +231,27 @@
 			</section>
 
 			<section data-role="content">
-            	Hit it up!
-            </section>
             
-            <section data-role="footer" data-position="fixed" data-id="footNav">
-				<section data-role="navbar">
-					<ul data-filter="true">
-						<li><a href="#qr" data-icon="check">Hunt</a></li>
-						<li><a href="#compass" data-icon="grid">Compass</a></li>
-						<li><a href="#flick" data-icon="check">Flick</a></li>
-					</ul>
-				</section>
-			</section>
+            	<input name="hashtag" id="hashtag" type="text"><a id="instaButton" data-role="button" data-inline="true" onClick="getVar();">Hit it up!</a>
+            
+           		<h2 id="instagramStatus">Searching Instagram...</h2>
+                <ul id="pullFeed" class="ui-grid-b ui-responsive">
+                </ul>
+            
+                <section data-role="footer" data-position="fixed" data-id="footNav">
+                    <section data-role="navbar">
+                        <ul data-filter="true">
+                            <li><a href="#qr" data-icon="check">Hunt</a></li>
+                            <li><a href="#compass" data-icon="grid">Compass</a></li>
+                            <li><a href="#flick" data-icon="check">Flick</a></li>
+                        </ul>
+                    </section>
+                </section>
+        
+        	</section>
         
         </section>
+       
         
         <section data-role="page" id="qr" data-theme="c" data-add-back-btn="true">
 
@@ -252,7 +262,7 @@
 			</section>
 
 			<section data-role="content">
-            	Mark it down!
+				Mark it down!
             </section>
             
             <section data-role="footer" data-position="fixed" data-id="footNav">
@@ -276,7 +286,21 @@
 			</section>
 
 			<section data-role="content">
-            	Get it done.
+            	<p><strong>1. </strong><strong>Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</strong></p>
+<p>It&rsquo;s pretty obvious, the perks of using Twitter for logins, no one wants to create an account anymore and why should you?  Everyone that does anything that would need a login already has a Twitter, Facebook or Google account so why not use it for other things?  You can either auto fill forms with the data to create your account or straight up login using Twitter.</p>
+<p>Using Twitter for payments is a little trickier.  I don&rsquo;t really see the purpose for this but you can either send money to another user by using a hashtag or other services allow you to send money to other users via the follow feature, although there are some very dark gray areas about that in Twitters Terms of Service.</p>
+<p><strong>2. </strong><strong>Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</strong></p>
+<p>JSONP allows you to gain access and retrieve data from external domain sources.  This allows developers to easily access public data hosted on someone else&rsquo;s servers.  API&rsquo;s like Instagram and Twitter are common examples but better examples are MLS services such as Zillow or Trulia who subscribe and grab data from countless local MLS services and display it on their own sites.</p>
+<p><strong>3. </strong><strong>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</strong></p>
+<p>QRdvark will integrate well with the native camera to scan QR Codes.</p>
+<p>Google Maps (or Google Places or Google Static Maps) will work good with geolocation.</p>
+<p>I&rsquo;m thinking about using Clickatell to manage the messages from the native contacts feature.</p>
+<p>And that&rsquo;s really it for the features I&rsquo;m going to be using, not much for the accelerometer or compass that I can find.</p>
+<p><strong>4. </strong><strong>Please describe any design and functionality intentions you may have for your Demo app components this month.</strong></p>
+<p>The main element for my project this month revolves around the camera so that&rsquo;s one native function that is an absolute must, along with geolocation.  My app is going to be a QR scavenger hunt app so I will need to find and use a 3rd party QR code scanner to use in conjunction with my camera.</p>
+<p>Also, I plan on restructuring my app using AJAX to get rid of a lot of the repetitive code.  Basically, my app will have the structure in one page then using AJAX suck the individual documents in the content area of the index page.  You&rsquo;ve probably seen or thought of it before, it seems like the best and lightest weight way to code an app.</p>
+<p><strong>5. </strong><strong>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</strong></p>
+<p>The most important thing I&rsquo;ve learned is to just get started.  It&rsquo;s incredibly detrimental to stare at a blank canvas, so if you&rsquo;re in an IDE, get your basic HTLM structure down or write out the names of your functions or simply make a bunch of comments.  It&rsquo;s so much easier to get going when you have something started already, otherwise it&rsquo;s almost like staring into the void.</p>
             </section>
             
             <section data-role="footer" data-position="fixed" data-id="footNav">
@@ -344,6 +368,7 @@
         <script src="js/jquery-migrate-1.2.1.min.js"></script>
         <!--<script src="js/jquery-1.10.2.min.map"></script>-->
         <script src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="js/main.js"></script>
 	</body>
 </html>

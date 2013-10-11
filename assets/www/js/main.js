@@ -75,4 +75,4 @@ $('#geo').on('pageinit', function() {
 	} else {
 		error('Geolocation is not supported');
 	}
-});
+}); 

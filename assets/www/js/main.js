@@ -1,13 +1,5 @@
 // JavaScript Document
 
-//document.addEventListener("deviceready", onDeviceReady, false);
-//
-//// PhoneGap is ready
-//
-//function onDeviceReady() {
-//	// device is ready.
-//}
-
 $('#instagramFeed').on('pageinit', function() {
 
 	// Instagram API

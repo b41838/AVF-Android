@@ -3,10 +3,9 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 // PhoneGap is ready
-//
+
 function onDeviceReady() {
-    alert('hi');
-    navigator.geolocation.getCurrentPosition(geoWin, geoFail);
+	// device is ready.
 }
 
 $('#instagramFeed').on('pageinit', function() {
@@ -85,14 +84,13 @@ $('#geo').on('pageinit', function() {
 		error('Geolocation is not supported');
 	}
 	
-	//navigator.geolocation.getCurrentPosition(geoWin, geoFail);
+	navigator.geolocation.getCurrentPosition(geoWin, geoFail);
 
 	// if successful get latitude and longitude for users current location
 	function geoWin(position) {
 		var element = document.getElementById('geolocation');
 		element.innerHTML = 'Latitude: '           + position.coords.latitude           + '<br />' +
 							'Longitude: '          + position.coords.longitude			+ '<br />';
-							//'Timestamp: '          + position.timestamp                 + '<br />'
 	}
 
 	// if fail throw error

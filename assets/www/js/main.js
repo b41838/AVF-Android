@@ -1,5 +1,14 @@
 // JavaScript Document
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
+// PhoneGap is ready
+//
+function onDeviceReady() {
+    alert('hi');
+    navigator.geolocation.getCurrentPosition(geoWin, geoFail);
+}
+
 $('#instagramFeed').on('pageinit', function() {
 
 	// Instagram API
@@ -76,7 +85,7 @@ $('#geo').on('pageinit', function() {
 		error('Geolocation is not supported');
 	}
 	
-	navigator.geolocation.getCurrentPosition(geoWin, geoFail);
+	//navigator.geolocation.getCurrentPosition(geoWin, geoFail);
 
 	// if successful get latitude and longitude for users current location
 	function geoWin(position) {

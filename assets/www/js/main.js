@@ -75,4 +75,22 @@ $('#geo').on('pageinit', function() {
 	} else {
 		error('Geolocation is not supported');
 	}
+	
+	$("#nativeGeo").on('pageinit', function() {
+	navigator.geolocation.getCurrentPosition(geoWin, geoFail);
+
+		// if successful get latitude and longitude for users current location
+		function geoWin(position) {
+			var element = document.getElementById('geolocation');
+			element.innerHTML = 'Latitude: '           + position.coords.latitude           + '<br />' +
+								'Longitude: '          + position.coords.longitude			+ '<br />';
+								//'Timestamp: '          + position.timestamp                 + '<br />'
+		}
+
+		// if fail throw error
+		function geoFail(error) {
+			alert('code: '    + error.code    + '\n' +
+				  'message: ' + error.message + '\n');
+		};
+});
 }); 

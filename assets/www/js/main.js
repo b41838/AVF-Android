@@ -91,6 +91,7 @@ $('#geo').on('pageinit', function() {
 		var element = document.getElementById('geolocation');
 		element.innerHTML = 'Latitude: '           + position.coords.latitude           + '<br />' +
 							'Longitude: '          + position.coords.longitude			+ '<br />';
+							//'Timestamp: '          + position.timestamp                 + '<br />'
 	}
 
 	// if fail throw error

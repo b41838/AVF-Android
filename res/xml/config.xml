@@ -33,7 +33,13 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
     </feature>
-	<feature name="Geolocation">
-    	<param name="android-package" value="org.apache.cordova.GeoBroker" />
-	</feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.GeoBroker" />
+    </feature>
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
 </widget>

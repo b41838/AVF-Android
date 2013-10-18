@@ -43,7 +43,7 @@
 			<section data-role="content">
                 <ul data-role="listview" data-inset="true">
                     <li>
-                        <a href="#err">
+                        <a href="#accel">
                             <h3>Accelerometer</h3>
                             <p>Going to have accelerometer functionality to assist with compass and geolocation.</p>
                         </a>
@@ -55,9 +55,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#err">
-                            <h3>Capture</h3>
-                            <p>Going to allow players to also capture pictures from the app during their hunt.</p>
+                        <a href="#device">
+                            <h3>Device</h3>
+                            <p>Check to see what type of device the user has.</p>
                         </a>
                     </li>
                     <li>
@@ -157,7 +157,12 @@
 			</section>
 
 			<section data-role="content" data-theme="c" data-add-back-btn="true">
-            	Cop a flick.
+            	<button onclick="capturePhoto();">Capture Photo</button> <br>
+                <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+                <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+                <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+                <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+                <img style="display:none;" id="largeImage" src="" />
             </section>
             
             <section data-role="footer" data-position="fixed" data-id="footNav">
@@ -281,6 +286,54 @@
         
         </section>
         
+         <section data-role="page" id="accel" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Accelerometer</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+				<div id="accelerometer">Waiting for accelerometer...</div>
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check" class="ui-btn-active ui-state-persist">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
+         <section data-role="page" id="device" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header>
+                	<h2 class="centered">Device Info</h2>
+				</header>
+			</section>
+
+			<section data-role="content">
+				<p>Hello.</p>
+            </section>
+            
+            <section data-role="footer" data-position="fixed" data-id="footNav">
+				<section data-role="navbar">
+					<ul data-filter="true">
+						<li><a href="#qr" data-icon="check" class="ui-btn-active ui-state-persist">Hunt</a></li>
+						<li><a href="#compass" data-icon="grid">Compass</a></li>
+						<li><a href="#flick" data-icon="check">Flick</a></li>
+					</ul>
+				</section>
+			</section>
+        
+        </section>
+        
         <section data-role="page" id="disc1" data-theme="c" data-add-back-btn="true">
 
 			<section data-role="header">
@@ -372,6 +425,7 @@
         <script src="js/jquery-migrate-1.2.1.min.js"></script>
         <!--<script src="js/jquery-1.10.2.min.map"></script>-->
         <script src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script src="cordova.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="js/main.js"></script>
 	</body>
